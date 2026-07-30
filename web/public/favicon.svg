@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        rect { fill: #030b18; }
+      }
+    </style>
+  </defs>
+  <rect width="64" height="64" fill="#F5F8FC"/>
+  <image href="https://horizons-cdn.hostinger.com/ccf663bc-1d78-4200-99ec-25ed813be7f4/e55d06f5401623adf9066a90183c2b12.png" x="8" y="8" width="48" height="48" preserveAspectRatio="xMidYMid meet"/>
+</svg>

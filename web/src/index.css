@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: 24 100% 50%;
+  --darkblue: 213 78% 12%;
+  --secondary-blue: 209 66% 23%;
+  --bg-light: 213 50% 97%;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: clip;
+  background-color: #F5F8FC;
+  color: #071B36;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark {
+  background-color: #030b18;
+  color: #eaf1fb;
+}
+
+@layer base {
+  :root {
+    --background: 213 50% 97%;
+    --foreground: 213 78% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 78% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 78% 12%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 209 66% 23%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 213 30% 92%;
+    --muted-foreground: 213 20% 40%;
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 213 30% 88%;
+    --input: 213 30% 88%;
+    --ring: 24 100% 50%;
+    --radius: 1.875rem;
+  }
+}
+
+/* Glass surfaces */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 25px 60px rgba(7, 27, 54, 0.14);
+}
+
+body.dark .glass {
+  background: rgba(19, 58, 99, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 25px 60px rgba(7, 27, 54, 0.18);
+}
+
+body.dark .glass-strong {
+  background: rgba(19, 58, 99, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #FF7A00, #ffb066 45%, #133A63);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark .text-gradient {
+  background: linear-gradient(120deg, #FF7A00, #ffc38a 55%, #7db6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass shine sweep */
+.glass-shine {
+  position: relative;
+  overflow: hidden;
+}
+.glass-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+}
+.glass-shine:hover::after {
+  left: 130%;
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.1); }
+  66% { transform: translate(-30px, 20px) scale(0.95); }
+}
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
