@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, MessageCircle, Mail, ArrowRight, Download } from 'lucide-react';
+import { Github, Linkedin, MessageCircle, Mail, ArrowRight, Download, PhoneCall } from 'lucide-react';
 import { profile } from '../../data/data';
 
 const roles = ['React Developer', 'UI/UX Designer', 'Business Software Developer'];
@@ -45,7 +45,7 @@ export default function Hero() {
   const socials = [
     { icon: Github, href: profile.socials.github, label: 'GitHub' },
     { icon: Linkedin, href: profile.socials.linkedin, label: 'LinkedIn' },
-    { icon: MessageCircle, href: profile.socials.whatsapp, label: 'WhatsApp' },
+    { icon: MessageCircle, href: 'https://wa.me/919360380276', label: 'WhatsApp' },
     { icon: Mail, href: profile.socials.email, label: 'Email' },
   ];
 
@@ -73,13 +73,18 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" className="glass-shine inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-white bg-[#FF7A00] hover:bg-[#e56d00] transition-colors">
+            <a 
+              href="https://wa.me/919360380276?text=Hi%20Dhanapal,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." 
+              target="_blank" 
+              rel="noreferrer" 
+              className="glass-shine inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-semibold text-white bg-[#FF7A00] hover:bg-[#e56d00] transition-colors shadow-lg shadow-[#FF7A00]/25 animate-bounce-subtle"
+            >
+              <MessageCircle size={18} /> Chat on WhatsApp
+            </a>
+            <a href="#projects" className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-semibold glass-strong hover:text-[#FF7A00] transition-colors">
               View Projects <ArrowRight size={18} />
             </a>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold glass-strong hover:text-[#FF7A00] transition-colors">
-              Contact Me
-            </a>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold glass hover:text-[#FF7A00] transition-colors">
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-semibold glass hover:text-[#FF7A00] transition-colors">
               <Download size={18} /> Resume
             </a>
           </div>
@@ -98,6 +103,12 @@ export default function Hero() {
                 <s.icon size={19} />
               </motion.a>
             ))}
+            <a
+              href="tel:9360380276"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium glass px-4 py-2.5 rounded-full hover:text-[#FF7A00] transition-colors ml-2"
+            >
+              <PhoneCall size={15} className="text-[#FF7A00]" /> +91 9360380276
+            </a>
           </div>
         </motion.div>
 
