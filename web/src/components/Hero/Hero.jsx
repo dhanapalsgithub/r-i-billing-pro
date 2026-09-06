@@ -44,8 +44,8 @@ export default function Hero() {
   };
 
   const socials = [
-    { icon: Github, href: profile.socials.github, label: 'GitHub' },
-    { icon: Linkedin, href: profile.socials.linkedin, label: 'LinkedIn' },
+    { icon: Github, href: "https://github.com/dhanapalsgithub", label: 'GitHub' },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/dhanapal-a-73359a352/", label: 'LinkedIn' },
     { icon: MessageCircle, href: 'https://wa.me/919360380276', label: 'WhatsApp' },
     { icon: Mail, href: profile.socials.email, label: 'Email' },
   ];
@@ -69,8 +69,7 @@ export default function Hero() {
             <Typewriter />
           </p>
           <p className="mt-5 max-w-lg text-base sm:text-lg opacity-70">
-            I build premium business software, ERP and billing systems, and modern web experiences that help brands
-            grow. Founder of {profile.company}.
+            I build premium business software, ERP and billing systems, e-commerce stores, and modern web experiences that help brands grow. Founder of {profile.company}.
           </p>
 
           {/* Above-the-fold Optimized High-Visibility CTA Buttons */}
