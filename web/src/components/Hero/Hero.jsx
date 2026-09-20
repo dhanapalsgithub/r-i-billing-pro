@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, MessageCircle, Mail, ArrowRight, Download, PhoneCall } from 'lucide-react';
 import { profile } from '../../data/data';
@@ -53,11 +53,9 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-[100dvh] flex items-center px-5 sm:px-8 pt-28 pb-16">
       <div className="max-w-[72rem] mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-        >
+        
+        {/* Clarity Optimization: Removed heavy initial framer-motion delay/distance to render text instantly */}
+        <div className="w-full">
           <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm font-medium mb-6">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             {profile.tagline}
@@ -72,7 +70,7 @@ export default function Hero() {
             I build premium business software, ERP and billing systems, e-commerce stores, and modern web experiences that help brands grow. Founder of {profile.company}.
           </p>
 
-          {/* Above-the-fold Optimized High-Visibility CTA Buttons */}
+          {/* High-Visibility CTA Buttons optimized for quick user engagement */}
           <div className="mt-8 flex flex-wrap gap-3">
             <a 
               href="https://wa.me/919360380276?text=Hi%20Dhanapal,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." 
@@ -114,9 +112,9 @@ export default function Hero() {
               <PhoneCall size={15} className="text-[#FF7A00]" /> +91 9360380276
             </a>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Speed-Optimized Image Section (Instant LCP without heavy layout shift animations) */}
+        {/* Speed-Optimized Image Section */}
         <div
           ref={ref}
           onMouseMove={onMove}

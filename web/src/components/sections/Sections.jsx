@@ -166,7 +166,7 @@ export function Contact() {
         <div className="relative grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h3 className="text-3xl font-extrabold mb-3">{profile.tagline}</h3>
-            <p className="opacity-75 mb-6">Based in {profile.location}. Available for freelance projects and full-time collaborations worldwide.</p>
+            <p className="opacity-75 mb-6">Based in {profile.location}. Available aslo Trichy  for freelance projects and full-time collaborations worldwide.</p>
             <div className="flex items-center gap-2 opacity-80"><MapPin size={18} className="text-[#FF7A00]" /> {profile.location}</div>
           </div>
           <div className="grid gap-4">
@@ -192,7 +192,7 @@ export function Contact() {
 export function Footer() {
   const year = 2026;
   return (
-    <footer className="px-5 sm:px-8 pb-10 pt-6">
+   <footer className="px-5 sm:px-8 pb-10 pt-6">
       <div className="max-w-[72rem] mx-auto glass rounded-[30px] p-10 grid sm:grid-cols-3 gap-8">
         <div>
           <div className="flex items-center gap-2 font-extrabold text-lg mb-3">
@@ -209,6 +209,9 @@ export function Footer() {
             <li><a href="#projects" className="hover:text-[#FF7A00]">Projects</a></li>
             <li><a href="#about" className="hover:text-[#FF7A00]">About</a></li>
             <li><a href="#contact" className="hover:text-[#FF7A00]">Contact</a></li>
+            <li><a href="/privacy-policy" className="hover:text-[#FF7A00]">Privacy Policy</a></li>
+            <li><a href="/return-policy" className="hover:text-[#FF7A00]">Return Policy</a></li>
+            <li><a href="/terms-and-conditions" className="hover:text-[#FF7A00]">Terms and Conditions</a></li>
           </ul>
         </div>
         <div>
@@ -222,7 +225,13 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <p className="text-center text-sm opacity-60 mt-6">© {year} Dhanapal · RI Billing Pro. All rights reserved.</p>
+      
+      {/* Copyright மற்றும் MSME Udyam Registration Number */}
+      <div className="text-center text-sm opacity-60 mt-6 space-y-1">
+        <p>© {year} Dhanapal · RI Billing Pro. All rights reserved.</p>
+        <p className="text-xs tracking-wide">MSME / Udyam Reg No: UDYAM-TN-27-0144759 (Micro - Services)</p>
+      </div>
     </footer>
   );
 }
+ 

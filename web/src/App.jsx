@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
+import ReturnPolicy from './pages/ReturnPolicy';
 
 function App() {
     useEffect(() => {
@@ -18,6 +21,10 @@ function App() {
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                {/* பிரைவசி பாலிசி பக்கத்திற்கான புதிய ரூட் */}
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                <Route path="/return-policy" element={<ReturnPolicy />} />
             </Routes>
         </Router>
     );
