@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ExternalLink, X, ArrowUpRight } from 'lucide-react';
+import { Search, ExternalLink, X, ArrowUpRight, Globe } from 'lucide-react';
 import { Section } from '../common/effects';
 import { projects } from '../../data/data';
 
@@ -50,25 +50,49 @@ export default function Projects() {
             <motion.div key={p.id} layout
               initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.92 }}
               whileHover={{ y: -8 }}
-              className="glass rounded-[30px] overflow-hidden group cursor-pointer"
+              className="glass rounded-[30px] overflow-hidden group cursor-pointer flex flex-col justify-between"
               onClick={() => setActive(p)}>
-              <div className="relative overflow-hidden">
-                <img src={p.image} alt={p.name} loading="lazy"
-                  className="w-full aspect-[3/2] object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className={`absolute inset-0 bg-gradient-to-t ${p.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 grid place-items-center`}>
-                  <span className="glass-strong rounded-full px-5 py-2 text-sm font-semibold flex items-center gap-2">
-                    View Details <ArrowUpRight size={16} />
-                  </span>
+              <div>
+                <div className="relative overflow-hidden">
+                  <img src={p.image} alt={p.name} loading="lazy"
+                    className="w-full aspect-[3/2] object-cover transition-transform duration-700 group-hover:scale-110" />
+                  
+                  {/* Centered View Details Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-t ${p.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 grid place-items-center`}>
+                    <span className="glass-strong rounded-full px-5 py-2 text-sm font-semibold flex items-center gap-2 shadow-xl">
+                      View Details <ArrowUpRight size={16} />
+                    </span>
+                  </div>
+
+                  {/* Category Badge on Top-Left */}
+                  <span className="absolute top-4 left-4 glass-strong rounded-full px-3 py-1 text-xs font-semibold">{p.category}</span>
                 </div>
-                <span className="absolute top-4 left-4 glass-strong rounded-full px-3 py-1 text-xs font-semibold">{p.category}</span>
+                <div className="p-6 pb-2">
+                  <h3 className="text-lg font-bold mb-1">{p.name}</h3>
+                  <p className="text-sm opacity-70 line-clamp-2">{p.desc}</p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-1">{p.name}</h3>
-                <p className="text-sm opacity-70 line-clamp-2">{p.desc}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
+
+              {/* Card Footer with Tech Stack & Direct Visit Website Link */}
+              <div className="p-6 pt-4 flex flex-col gap-4">
+                <div className="flex flex-wrap gap-2">
                   {p.tech.map((t) => (
                     <span key={t} className="text-xs font-medium glass rounded-full px-2.5 py-1">{t}</span>
                   ))}
+                </div>
+
+                {/* Direct External Link Button on the Card */}
+                <div className="pt-2 border-t border-white/10 flex items-center justify-between">
+                  <span className="text-xs opacity-60 font-medium">Quick Access</span>
+                  <a 
+                    href={p.url} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()} // Prevents opening the modal when clicking the link directly
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#FF7A00] hover:underline bg-[#FF7A00]/10 hover:bg-[#FF7A00]/20 rounded-full px-3.5 py-1.5 transition-colors"
+                  >
+                    Visit Website <Globe size={13} />
+                  </a>
                 </div>
               </div>
             </motion.div>
