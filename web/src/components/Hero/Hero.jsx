@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, MessageCircle, Mail, ArrowRight, Download, PhoneCall } from 'lucide-react';
 import { profile } from '../../data/data';
 
@@ -32,17 +31,6 @@ function Typewriter() {
 }
 
 export default function Hero() {
-  const ref = useRef(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-
-  const onMove = (e) => {
-    if (!ref.current) return;
-    const r = ref.current.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width - 0.5;
-    const py = (e.clientY - r.top) / r.height - 0.5;
-    setTilt({ x: py * -10, y: px * 12 });
-  };
-
   const socials = [
     { icon: Github, href: "https://github.com/dhanapalsgithub", label: 'GitHub' },
     { icon: Linkedin, href: "https://www.linkedin.com/in/dhanapal-a-73359a352/", label: 'LinkedIn' },
@@ -52,9 +40,8 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-[100dvh] flex items-center px-5 sm:px-8 pt-28 pb-16">
-      <div className="max-w-[72rem] mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="max-w-[56rem] mx-auto w-full text-center md:text-left">
         
-        {/* Clarity Optimization: Removed heavy initial framer-motion delay/distance to render text instantly */}
         <div className="w-full">
           <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm font-medium mb-6">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -66,12 +53,12 @@ export default function Hero() {
           <p className="mt-5 text-xl sm:text-2xl font-semibold h-8">
             <Typewriter />
           </p>
-          <p className="mt-5 max-w-lg text-base sm:text-lg opacity-70">
+          <p className="mt-5 max-w-2xl text-base sm:text-lg opacity-70 mx-auto md:mx-0">
             I build premium business software, ERP and billing systems, e-commerce stores, and modern web experiences that help brands grow. Founder of {profile.company}.
           </p>
 
           {/* High-Visibility CTA Buttons optimized for quick user engagement */}
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
             <a 
               href="https://wa.me/919360380276?text=Hi%20Dhanapal,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." 
               target="_blank" 
@@ -92,7 +79,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-3">
             {socials.map((s) => (
               <a
                 key={s.label}
@@ -114,43 +101,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Speed-Optimized Image Section */}
-        <div
-          ref={ref}
-          onMouseMove={onMove}
-          onMouseLeave={() => setTilt({ x: 0, y: 0 })}
-          className="relative mx-auto w-full max-w-sm"
-          style={{ perspective: 1000 }}
-        >
-          <div
-            className="glass-strong glass-shine rounded-[30px] p-4 relative"
-            style={{ 
-              transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-              transformStyle: 'preserve-3d',
-              transition: 'transform 0.1s ease-out'
-            }}
-          >
-            <div>
-              <img
-                src={profile.image}
-                alt="Dhanapal, React Frontend Developer"
-                loading="eager"
-                fetchPriority="high"
-                width="400"
-                height="400"
-                className="w-full rounded-[22px] object-cover aspect-square"
-              />
-            </div>
-            <div className="absolute -bottom-5 -left-5 glass-strong rounded-2xl px-5 py-3 shadow-xl">
-              <p className="text-2xl font-extrabold text-[#FF7A00]">6+</p>
-              <p className="text-xs font-medium opacity-70">Years Exp.</p>
-            </div>
-            <div className="absolute -top-5 -right-5 glass-strong rounded-2xl px-5 py-3 shadow-xl">
-              <p className="text-2xl font-extrabold text-[#FF7A00]">50+</p>
-              <p className="text-xs font-medium opacity-70">Projects</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
