@@ -174,9 +174,8 @@ export function AddOns() {
   );
 }
 
-
 export function Pricing() {
-  const [activeTab, setActiveTab] = useState('websites');
+  const [activeTab, setActiveTab] = useState('billing');
 
   return (
     <Section 
@@ -187,10 +186,20 @@ export function Pricing() {
     >
       {/* Switcher Tabs */}
       <div className="flex justify-center mb-12">
-        <div className="glass p-1.5 rounded-full flex gap-2 border border-white/10">
+        <div className="glass p-1.5 rounded-full flex flex-wrap justify-center gap-2 border border-white/10">
+          <button
+            onClick={() => setActiveTab('billing')}
+            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+              activeTab === 'billing'
+                ? 'bg-[#FF7A00] text-white shadow-lg shadow-orange-500/25'
+                : 'opacity-70 hover:opacity-100'
+            }`}
+          >
+            RI Billing Pro
+          </button>
           <button
             onClick={() => setActiveTab('websites')}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeTab === 'websites'
                 ? 'bg-[#FF7A00] text-white shadow-lg shadow-orange-500/25'
                 : 'opacity-70 hover:opacity-100'
@@ -200,7 +209,7 @@ export function Pricing() {
           </button>
           <button
             onClick={() => setActiveTab('marketing')}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeTab === 'marketing'
                 ? 'bg-[#FF7A00] text-white shadow-lg shadow-orange-500/25'
                 : 'opacity-70 hover:opacity-100'
@@ -210,7 +219,7 @@ export function Pricing() {
           </button>
           <button
             onClick={() => setActiveTab('addons')}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeTab === 'addons'
                 ? 'bg-[#FF7A00] text-white shadow-lg shadow-orange-500/25'
                 : 'opacity-70 hover:opacity-100'
@@ -222,6 +231,60 @@ export function Pricing() {
       </div>
 
       <AnimatePresence mode="wait">
+        {/* BILLING SOFTWARE PACKAGES */}
+        {activeTab === 'billing' && (
+          <motion.div 
+            key="billing"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          >
+            {billingPackages.map((pkg, i) => (
+              <motion.div 
+                key={pkg.name}
+                {...fadeUp}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                whileHover={{ y: -6 }}
+                className="glass rounded-[30px] p-8 flex flex-col justify-between relative group border border-white/10"
+              >
+                <div>
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-[#FF7A00] bg-[#FF7A00]/10 px-3 py-1 rounded-full">
+                      {pkg.badge}
+                    </span>
+                    <span className="text-xs font-medium text-[#FF7A00] bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                      Amount Negotiable
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-2xl font-black mb-1">{pkg.name}</h3>
+                  <div className="text-3xl font-extrabold text-[#FF7A00] mb-2">
+                    {pkg.price}
+                  </div>
+                  <p className="text-xs opacity-60 mb-4">{pkg.description}</p>
+                  <p className="text-xs font-medium text-[#FF7A00] mb-6">Solutions start from ₹10,000</p>
+
+                  <ul className="space-y-3 mb-8 text-sm opacity-80 border-t border-white/10 pt-4">
+                    {pkg.features.map((feat, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <Check size={16} className="text-[#FF7A00] shrink-0" /> <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a 
+                  href="#contact" 
+                  className="w-full py-3 rounded-2xl bg-[#FF7A00] hover:bg-[#e56d00] text-white font-bold text-center shadow-lg shadow-orange-500/20 transition-transform active:scale-95 block"
+                >
+                  Get Billing Software
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+
         {/* WEBSITE PACKAGES */}
         {activeTab === 'websites' && (
           <motion.div 
