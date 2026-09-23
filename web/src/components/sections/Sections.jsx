@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MessageCircle, MapPin, Quote, Github, Linkedin, Globe, Boxes, ReceiptText, ScanLine, UserRound, Rocket, LayoutDashboard, Code2, Sparkles } from 'lucide-react';
+import { Phone, Mail, MessageCircle, MapPin, Quote, Github, Linkedin, Globe, Boxes, ReceiptText, ScanLine, UserRound, Rocket, LayoutDashboard, Code2, Sparkles, MapPin as MapPinIcon, Megaphone, TrendingUp, Store, Monitor } from 'lucide-react';
 
-const ICON_MAP = { Globe, Boxes, ReceiptText, ScanLine, UserRound, Rocket, LayoutDashboard, Code2 };
+const ICON_MAP = { Globe, Boxes, ReceiptText, ScanLine, UserRound, Rocket, LayoutDashboard, Code2, MapPin: MapPinIcon, Megaphone, TrendingUp, Store, Monitor, Sparkles };
 import { Section, Counter, CircularProgress } from '../common/effects';
 import { about, skills, services, timeline, achievements, testimonials, profile } from '../../data/data';
 
@@ -66,7 +66,7 @@ export function Skills() {
 
 export function Services() {
   return (
-    <Section id="services" eyebrow="Services" title="What I build" subtitle="End-to-end product development for founders and teams.">
+    <Section id="services" eyebrow="Services" title="What I build & scale" subtitle="End-to-end product development & digital marketing for founders and teams.">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((s, i) => {
           const Icon = ICON_MAP[s.icon] || Sparkles;
@@ -166,7 +166,7 @@ export function Contact() {
         <div className="relative grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h3 className="text-3xl font-extrabold mb-3">{profile.tagline}</h3>
-            <p className="opacity-75 mb-6">Based in {profile.location}. Available aslo Trichy  for freelance projects and full-time collaborations worldwide.</p>
+            <p className="opacity-75 mb-6">Based in {profile.location}. Available also Trichy for freelance projects and full-time collaborations worldwide.</p>
             <div className="flex items-center gap-2 opacity-80"><MapPin size={18} className="text-[#FF7A00]" /> {profile.location}</div>
           </div>
           <div className="grid gap-4">
@@ -234,4 +234,3 @@ export function Footer() {
     </footer>
   );
 }
- 
