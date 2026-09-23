@@ -9,6 +9,7 @@ const links = [
   { label: 'Services', href: '#services' },
   { label: 'Why Us', href: '#why-choose-us' },
   { label: 'Add-Ons', href: '#add-ons' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -31,7 +32,7 @@ export default function Navbar({ dark, toggle }) {
       className="fixed top-0 inset-x-0 z-[95] px-4 pt-4"
     >
       <nav
-        className={`max-w-[72rem] mx-auto flex items-center justify-between rounded-[26px] px-5 py-3.5 transition-all duration-500 ${
+        className={`max-w-[76rem] mx-auto flex items-center justify-between rounded-[26px] px-5 py-3.5 transition-all duration-500 ${
           scrolled ? 'glass-strong shadow-lg' : 'glass'
         }`}
       >
@@ -50,12 +51,12 @@ export default function Navbar({ dark, toggle }) {
         </a>
 
         {/* Navigation Links */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-5">
           {links.map((l) => (
             <a 
               key={l.href} 
               href={l.href} 
-              className="text-sm font-semibold opacity-80 hover:opacity-100 hover:text-[#FF7A00] transition-colors"
+              className="text-sm font-semibold opacity-85 hover:opacity-100 hover:text-[#FF7A00] transition-colors"
             >
               {l.label}
             </a>
@@ -96,7 +97,7 @@ export default function Navbar({ dark, toggle }) {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="lg:hidden max-w-[72rem] mx-auto mt-2 glass-strong rounded-3xl p-4 flex flex-col gap-1 shadow-2xl max-h-[80vh] overflow-y-auto"
+            className="lg:hidden max-w-[76rem] mx-auto mt-2 glass-strong rounded-3xl p-4 flex flex-col gap-1 shadow-2xl max-h-[80vh] overflow-y-auto"
           >
             {links.map((l) => (
               <a
