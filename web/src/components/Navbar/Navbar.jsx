@@ -7,6 +7,8 @@ const links = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Services', href: '#services' },
+  { label: 'Why Us', href: '#why-choose-us' },
+  { label: 'Add-Ons', href: '#add-ons' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -35,11 +37,11 @@ export default function Navbar({ dark, toggle }) {
       >
         {/* Prominent & Clear Logo Section */}
         <a href="#home" className="flex items-center gap-3 font-extrabold text-xl tracking-tight group">
-          <span className="flex items-center justify-center w-32 h-32 sm:w-12 sm:h-12 rounded-2xl bg-[#FF7A00] ring-4 ring-[#FF7A00]/30 shadow-lg shadow-[#FF7A00]/40 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <span className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#FF7A00] ring-4 ring-[#FF7A00]/30 shadow-lg shadow-[#FF7A00]/40 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
             <img 
               src="https://horizons-cdn.hostinger.com/ccf663bc-1d78-4200-99ec-25ed813be7f4/e55d06f5401623adf9066a90183c2b12.png" 
               alt="RI Billing Pro Logo" 
-              className="h-50  w-50 sm:h-70 sm:w-70 object-contain rounded-xl" 
+              className="h-6 w-6 sm:h-7 sm:w-7 object-contain rounded-xl" 
             />
           </span>
           <span className="inline text-lg sm:text-xl font-black tracking-tight text-gradient">
@@ -48,7 +50,7 @@ export default function Navbar({ dark, toggle }) {
         </a>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-6">
           {links.map((l) => (
             <a 
               key={l.href} 
@@ -80,7 +82,7 @@ export default function Navbar({ dark, toggle }) {
           <button
             aria-label="Menu"
             onClick={() => setOpen((o) => !o)}
-            className="md:hidden w-11 h-11 rounded-full grid place-items-center glass"
+            className="lg:hidden w-11 h-11 rounded-full grid place-items-center glass"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -94,7 +96,7 @@ export default function Navbar({ dark, toggle }) {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden max-w-[72rem] mx-auto mt-2 glass-strong rounded-3xl p-4 flex flex-col gap-1 shadow-2xl"
+            className="lg:hidden max-w-[72rem] mx-auto mt-2 glass-strong rounded-3xl p-4 flex flex-col gap-1 shadow-2xl max-h-[80vh] overflow-y-auto"
           >
             {links.map((l) => (
               <a
@@ -106,6 +108,15 @@ export default function Navbar({ dark, toggle }) {
                 {l.label}
               </a>
             ))}
+            <div className="pt-2 mt-2 border-t border-white/10">
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="w-full text-center rounded-2xl py-3 font-bold text-white bg-[#FF7A00] hover:bg-[#e56d00] block shadow-md shadow-[#FF7A00]/25"
+              >
+                Let&apos;s Talk
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

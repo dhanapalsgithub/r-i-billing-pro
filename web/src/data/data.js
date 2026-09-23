@@ -63,6 +63,25 @@ export const services = [
   { title: "Brand Awareness", desc: "Scale your reach with strategic digital positioning and multi-channel promotion.", icon: "TrendingUp" },
 ];
 
+export const addOnsData = {
+  gmbAndSmo: [
+    { title: "Keyword Research", desc: "In-depth keyword discovery to target high-intent local and niche search queries.", icon: "Search" },
+    { title: "Review Replies", desc: "Professional, engagement-boosting responses to all positive and critical customer reviews.", icon: "MessageSquareText" },
+    { title: "Wrong Review Removal", desc: "Strategic assistance to flag, appeal, and remove spam or illegal negative reviews.", icon: "ShieldAlert" },
+    { title: "2-Week Content Posting", desc: "Scheduled high-value posts for 14 straight days to maintain active profile signals.", icon: "CalendarDays" },
+    { title: "Q&A Setup & Management", desc: "Structured question-and-answer seeding to inform buyers and rank higher on Google.", icon: "HelpCircle" },
+    { title: "Regular Profile Monitoring", desc: "Continuous monitoring for duplicate listings, user edits, and profile health.", icon: "Eye" },
+    { title: "Social Media Optimization (SMO)", desc: "Complete optimization of bio, highlights, hashtags, and call-to-actions across platforms.", icon: "Share2" },
+    { title: "GMB Optimization (GMBO)", desc: "Complete Google My Business audit, geotagging, category mapping, and map-pack ranking.", icon: "MapPin" }
+  ],
+  videoServices: [
+    { title: "AI Video Creation", desc: "Cutting-edge AI avatars, scripts, and voiceovers tailored for rapid marketing output.", icon: "Bot" },
+    { title: "Vertical Videos (9:16)", desc: "High-converting short-form videos engineered for Instagram Reels, Shorts & TikTok.", icon: "Smartphone" },
+    { title: "Horizontal Videos (16:9)", desc: "Full-width landscape video production ideal for YouTube, websites, and TV displays.", icon: "Tv" },
+    { title: "Professional Video Production", desc: "Premium editing, motion graphics, color grading, and studio-grade audio processing.", icon: "Video" }
+  ]
+};
+
 export const projects = [
   {
     id: 1,

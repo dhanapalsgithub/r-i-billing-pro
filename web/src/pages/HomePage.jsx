@@ -5,7 +5,7 @@ import { Background, ScrollProgress, BackToTop, LoadingScreen, AnimatedCursor } 
 import Navbar from '../components/Navbar/Navbar';
 import Hero from '../components/Hero/Hero';
 import Projects from '../components/Projects/Projects';
-import { About, Skills, Services, WhyChooseUs, Timeline, Achievements, Testimonials, Contact, Footer } from '../components/sections/Sections';
+import { About, Skills, Services, WhyChooseUs, AddOns, Timeline, Achievements, Testimonials, Contact, Footer } from '../components/sections/Sections';
 
 export default function HomePage() {
   const { dark, toggle } = useDarkMode();
@@ -36,6 +36,7 @@ export default function HomePage() {
         <Skills />
         <Services />
         <WhyChooseUs />
+        <AddOns />
         <Projects />
         <Timeline />
         <Achievements />
