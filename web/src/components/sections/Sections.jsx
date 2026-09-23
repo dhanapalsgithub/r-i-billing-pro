@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { Section, Counter, CircularProgress } from '../common/effects';
 import { about, skills, services, timeline, achievements, testimonials, profile, addOnsData } from '../../data/data';
-import { websitePackages, digitalMarketingPackages, addOnsList } from '../../data/pricingData';
+import { billingPackages, websitePackages, digitalMarketingPackages, addOnsList } from '../../data/pricingData';
 
 const ICON_MAP = { 
   Globe, Boxes, ReceiptText, ScanLine, UserRound, Rocket, LayoutDashboard, 
@@ -260,10 +260,10 @@ export function Pricing() {
                   
                   <h3 className="text-2xl font-black mb-1">{pkg.name}</h3>
                   <div className="text-3xl font-extrabold text-[#FF7A00] mb-2">
-                    {pkg.price}
+                    {pkg.price} <span className="text-xs font-normal line-through opacity-50">{pkg.origPrice}</span>
                   </div>
-                  <p className="text-xs opacity-60 mb-4">{pkg.description}</p>
-                  <p className="text-xs font-medium text-[#FF7A00] mb-6">Solutions start from ₹10,000</p>
+                  <p className="text-xs font-semibold text-[#FF7A00] mb-3">{pkg.validity}</p>
+                  <p className="text-xs opacity-60 mb-6">{pkg.description}</p>
 
                   <ul className="space-y-3 mb-8 text-sm opacity-80 border-t border-white/10 pt-4">
                     {pkg.features.map((feat, idx) => (
@@ -305,7 +305,7 @@ export function Pricing() {
                 <div>
                   <div className="flex justify-between items-start mb-4">
                     <span className="text-xs font-semibold uppercase tracking-widest text-[#FF7A00] bg-[#FF7A00]/10 px-3 py-1 rounded-full">
-                      {pkg.validity} Validity
+                      Website Package
                     </span>
                     <span className="text-xs font-medium text-[#FF7A00] bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
                       Amount Negotiable
@@ -314,7 +314,7 @@ export function Pricing() {
                   
                   <h3 className="text-2xl font-black mb-1">{pkg.name}</h3>
                   <div className="text-3xl font-extrabold text-[#FF7A00] mb-2">
-                    {pkg.price}
+                    {pkg.price} <span className="text-xs font-normal line-through opacity-50">{pkg.origPrice}</span>
                   </div>
                   <p className="text-xs opacity-60 mb-6">Services start from ₹10,000</p>
 
@@ -323,10 +323,10 @@ export function Pricing() {
                       <Check size={16} className="text-[#FF7A00]" /> Pages: <strong>{pkg.pages}</strong>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Check size={16} className="text-[#FF7A00]" /> Domain Setup: <strong>Included</strong>
+                      <Check size={16} className="text-[#FF7A00]" /> Domain Setup: <strong>{pkg.Domain || pkg.freeDomain}</strong>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Check size={16} className="text-[#FF7A00]" /> Hosting Setup: <strong>Included</strong>
+                      <Check size={16} className="text-[#FF7A00]" /> Hosting Setup: <strong>{pkg.freeHosting}</strong>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check size={16} className="text-[#FF7A00]" /> Built-in SEO Work: <strong>{pkg.seo}</strong>

@@ -1,10 +1,43 @@
+export const billingPackages = [
+  {
+    name: "Software Only (Without Machine)",
+    price: "10,000 ₹",
+    origPrice: "18,000 ₹",
+    validity: "Lifetime / Annual",
+    description: "Complete RI Billing Pro software license with cloud syncing and POS tools.",
+    features: [
+      "Full POS & Inventory Management",
+      "Google Sheets Cloud Synchronization",
+      "Direct Thermal Print Integration (ESC/POS)",
+      "Sales Analytics & Reports",
+      "Free Software Updates & Support"
+    ],
+    badge: "Most Popular"
+  },
+  {
+    name: "Hardware Bundle (With 800mm Thermal Printer)",
+    price: "18,000 ₹",
+    origPrice: "25,000 ₹",
+    validity: "Complete Setup",
+    description: "RI Billing Pro software bundled with a high-speed 800mm thermal receipt printer.",
+    features: [
+      "Complete RI Billing Pro Software License",
+      "High-Speed 800mm Thermal Receipt Printer",
+      "Plug-and-Play USB/Bluetooth Driver Setup",
+      "Inventory & Billing Dashboard",
+      "Priority Installation & Onboarding Support"
+    ],
+    badge: "Complete Kit"
+  }
+];
+
 export const websitePackages = [
-  { name: "Static", price: "10,000 ₹", origPrice: "24,000 ₹",  pages: "unlimited", Domain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Static", price: "10,000 ₹", origPrice: "24,000 ₹", pages: "unlimited", Domain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
   { name: "Static+", price: "15,500 ₹", origPrice: "30,000 ₹", pages: "unlimited", Domain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Dynamic", price: "18,500 ₹", origPrice: "36,000 ₹",  pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Dynamic+", price: "20,500 ₹", origPrice: "41,000 ₹",pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
-  { name: "GMB Dynamic+", price: "23,000 ₹", origPrice: "51,000 ₹",  pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
-  { name: "SEO + AEO + GEO", price: "35,000 ₹", origPrice: "75,000 ₹",  pages: "10", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "GMB Registration + FAQ/Articles" }
+  { name: "Dynamic", price: "18,500 ₹", origPrice: "36,000 ₹", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Dynamic+", price: "20,500 ₹", origPrice: "41,000 ₹", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
+  { name: "GMB Dynamic+", price: "23,000 ₹", origPrice: "51,000 ₹", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
+  { name: "SEO + AEO + GEO", price: "35,000 ₹", origPrice: "75,000 ₹", pages: "10", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "GMB Registration + FAQ/Articles" }
 ];
 
 export const digitalMarketingPackages = [
