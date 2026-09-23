@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Sparkles, Tag, ShieldCheck } from 'lucide-react';
+import { Check, Sparkles, Tag, ShieldCheck, MessageCircle } from 'lucide-react';
 import { Section } from '../common/effects';
 import { websitePackages, digitalMarketingPackages, addOnsList } from '../../data/pricingData';
 
@@ -18,7 +18,7 @@ export function Pricing() {
       id="pricing" 
       eyebrow="Investment Plans" 
       title="Transparent Pricing for RI Billing Pro & Digital Growth" 
-      subtitle="Choose a high-performance web package, complete digital marketing retainer, or powerful add-ons."
+      subtitle="Explore our flexible packages. All service amounts are negotiable, with solutions starting from ₹10,000."
     >
       {/* Switcher Tabs */}
       <div className="flex justify-center mb-12">
@@ -79,23 +79,26 @@ export function Pricing() {
                     <span className="text-xs font-semibold uppercase tracking-widest text-[#FF7A00] bg-[#FF7A00]/10 px-3 py-1 rounded-full">
                       {pkg.validity} Validity
                     </span>
-                    <span className="text-xs line-through opacity-50">{pkg.origPrice}</span>
+                    <span className="text-xs font-medium text-[#FF7A00] bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                      Amount Negotiable
+                    </span>
                   </div>
                   
                   <h3 className="text-2xl font-black mb-1">{pkg.name}</h3>
-                  <div className="text-3xl font-extrabold text-[#FF7A00] mb-6">
-                    {pkg.price} <span className="text-xs font-normal opacity-60">+ 18% GST</span>
+                  <div className="text-3xl font-extrabold text-[#FF7A00] mb-2">
+                    {pkg.price}
                   </div>
+                  <p className="text-xs opacity-60 mb-6">Services start from ₹10,000</p>
 
                   <ul className="space-y-3 mb-8 text-sm opacity-80 border-t border-white/10 pt-4">
                     <li className="flex items-center gap-2">
                       <Check size={16} className="text-[#FF7A00]" /> Pages: <strong>{pkg.pages}</strong>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Check size={16} className="text-[#FF7A00]" /> Free Domain (.in / .co.in): <strong>{pkg.freeDomain}</strong>
+                      <Check size={16} className="text-[#FF7A00]" /> Domain Setup: <strong>Included</strong>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Check size={16} className="text-[#FF7A00]" /> Free High-Speed Hosting: <strong>{pkg.freeHosting}</strong>
+                      <Check size={16} className="text-[#FF7A00]" /> Hosting Setup: <strong>Included</strong>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check size={16} className="text-[#FF7A00]" /> Built-in SEO Work: <strong>{pkg.seo}</strong>
@@ -112,7 +115,7 @@ export function Pricing() {
                   href="#contact" 
                   className="w-full py-3 rounded-2xl bg-[#FF7A00] hover:bg-[#e56d00] text-white font-bold text-center shadow-lg shadow-orange-500/20 transition-transform active:scale-95 block"
                 >
-                  Get Started
+                  Discuss Custom Quote
                 </a>
               </motion.div>
             ))}
@@ -137,14 +140,20 @@ export function Pricing() {
                 className="glass rounded-[30px] p-8 flex flex-col justify-between relative group border border-white/10"
               >
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-widest text-[#FF7A00] bg-[#FF7A00]/10 px-3 py-1 rounded-full mb-4 inline-block">
-                    Monthly Retainer
-                  </span>
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-[#FF7A00] bg-[#FF7A00]/10 px-3 py-1 rounded-full">
+                      Monthly Retainer
+                    </span>
+                    <span className="text-xs font-medium text-[#FF7A00] bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                      Amount Negotiable
+                    </span>
+                  </div>
                   
                   <h3 className="text-2xl font-black mb-1">{dms.name}</h3>
-                  <div className="text-3xl font-extrabold text-[#FF7A00] mb-6">
+                  <div className="text-3xl font-extrabold text-[#FF7A00] mb-2">
                     {dms.price} <span className="text-xs font-normal opacity-65">/ month</span>
                   </div>
+                  <p className="text-xs opacity-60 mb-6">Retainers start from ₹10,000</p>
 
                   <ul className="space-y-3 mb-8 text-sm opacity-80 border-t border-white/10 pt-4">
                     <li className="flex items-center gap-2">
@@ -166,7 +175,7 @@ export function Pricing() {
                   href="#contact" 
                   className="w-full py-3 rounded-2xl bg-[#FF7A00] hover:bg-[#e56d00] text-white font-bold text-center shadow-lg shadow-orange-500/20 transition-transform active:scale-95 block"
                 >
-                  Select Package
+                  Discuss Package
                 </a>
               </motion.div>
             ))}
@@ -191,13 +200,19 @@ export function Pricing() {
                 className="glass rounded-[25px] p-6 flex flex-col justify-between border border-white/10"
               >
                 <div>
-                  <span className="grid place-items-center w-10 h-10 rounded-xl bg-[#FF7A00]/10 text-[#FF7A00] mb-4">
-                    <Tag size={18} />
-                  </span>
+                  <div className="flex justify-between items-start mb-3">
+                    <span className="grid place-items-center w-10 h-10 rounded-xl bg-[#FF7A00]/10 text-[#FF7A00]">
+                      <Tag size={18} />
+                    </span>
+                    <span className="text-[11px] font-medium text-[#FF7A00] bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                      Negotiable
+                    </span>
+                  </div>
                   <h4 className="font-bold text-base mb-2">{addon.title}</h4>
                 </div>
-                <div className="text-lg font-black text-[#FF7A00] pt-4 border-t border-white/10 mt-2">
-                  {addon.price}
+                <div className="text-lg font-black text-[#FF7A00] pt-4 border-t border-white/10 mt-2 flex items-center justify-between">
+                  <span>{addon.price}</span>
+                  <span className="text-xs font-normal opacity-60">Flexible terms</span>
                 </div>
               </motion.div>
             ))}
@@ -214,8 +229,8 @@ export function Pricing() {
           <ShieldCheck size={20} />
         </span>
         <div className="text-left">
-          <p className="text-xs font-semibold uppercase tracking-widest opacity-60 mb-0.5">Tax & Compliance Notice</p>
-          <p className="text-sm font-medium opacity-85">18% GST Extra on all prices. MSME / Udyam Reg No: <strong>UDYAM-TN-27-0144759</strong></p>
+          <p className="text-xs font-semibold uppercase tracking-widest opacity-60 mb-0.5">Enterprise Assurance</p>
+          <p className="text-sm font-medium opacity-85">MSME / Udyam Reg No: <strong>UDYAM-TN-27-0144759</strong> (Micro - Services)</p>
         </div>
       </motion.div>
     </Section>
