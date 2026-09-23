@@ -1,61 +1,101 @@
 export const billingPackages = [
   {
-    name: "Software Only (Without Machine)",
-    price: "10,000 ₹",
-    origPrice: "18,000 ₹",
-    validity: "Lifetime / Annual",
-    description: "Complete RI Billing Pro software license with cloud syncing and POS tools.",
-    features: [
-      "Full POS & Inventory Management",
-      "Google Sheets Cloud Synchronization",
-      "Direct Thermal Print Integration (ESC/POS)",
-      "Sales Analytics & Reports",
-      "Free Software Updates & Support"
-    ],
-    badge: "Most Popular"
-  },
-  {
-    name: "Hardware Bundle (With 800mm Thermal Printer)",
+    name: "Hardware Bundle (With 80mm Thermal Printer)",
     price: "18,000 ₹",
     origPrice: "25,000 ₹",
     validity: "Complete Setup",
-    description: "RI Billing Pro software bundled with a high-speed 800mm thermal receipt printer.",
+    description: "RI Billing Pro software bundled with a high-speed 80mm thermal receipt printer.",
     features: [
       "Complete RI Billing Pro Software License",
-      "High-Speed 800mm Thermal Receipt Printer",
+      "High-Speed 80mm Thermal Receipt Printer",
       "Plug-and-Play USB/Bluetooth Driver Setup",
       "Inventory & Billing Dashboard",
       "Priority Installation & Onboarding Support"
     ],
     badge: "Complete Kit"
+  },
+  {
+    name: "Professional Enterprise Billing",
+    price: "30,000 ₹",
+    origPrice: "40,000 ₹",
+    validity: "Advanced Enterprise Setup",
+    description: "Comprehensive billing software upgrade built with advanced compliance and logistics support.",
+    features: [
+      "Full RI Billing Pro License",
+      "Integrated e-Way Bill Generation Support",
+      "Delivery Challan (DC) Management Module",
+      "Advanced Inventory & Multi-Store Tracking",
+      "Cloud Syncing & Custom Print Templates",
+      "Dedicated Priority Support & Setup"
+    ],
+    badge: "Enterprise Grade"
   }
 ];
 
 export const websitePackages = [
-  { name: "Static", price: "10,000 ₹", origPrice: "24,000 ₹", pages: "unlimited", Domain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Static+", price: "15,500 ₹", origPrice: "30,000 ₹", pages: "unlimited", Domain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Dynamic", price: "18,500 ₹", origPrice: "36,000 ₹", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Dynamic+", price: "20,500 ₹", origPrice: "41,000 ₹", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
-  { name: "GMB Dynamic+", price: "23,000 ₹", origPrice: "51,000 ₹", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
-  { name: "SEO + AEO + GEO", price: "35,000 ₹", origPrice: "75,000 ₹", pages: "10", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "GMB Registration + FAQ/Articles" }
+  {
+    name: "Starter Business Website",
+    price: "₹10,000",
+    origPrice: "₹15,000",
+    pages: "1 to 3 Pages",
+    Domain: "1 Year Free Domain",
+    freeHosting: "1 Year Free Hosting",
+    seo: "Basic On-Page SEO",
+    addon: "WhatsApp Chat Integration"
+  },
+  {
+    name: "Professional Business Site",
+    price: "₹18,000",
+    origPrice: "₹25,000",
+    pages: "Up to 6 Pages",
+    Domain: "1 Year Free Domain",
+    freeHosting: "1 Year Free Hosting",
+    seo: "Advanced SEO & Meta Setup",
+    addon: "GMB Setup Included"
+  },
+  {
+    name: "E-Commerce / Custom App",
+    price: "₹30,000+",
+    origPrice: "₹45,000+",
+    pages: "Unlimited / Dynamic",
+    Domain: "1 Year Free Domain",
+    freeHosting: "High-Speed Cloud Setup",
+    seo: "Full Technical SEO Suite",
+    addon: "Payment Gateway Integration"
+  }
 ];
 
 export const digitalMarketingPackages = [
-  { name: "Basic", price: "12,000 ₹", posts: "4 Images /mo", video: "4 Shorts /mo", adSupport: "YES", profile: "GMB Setup" },
-  { name: "Starter", price: "20,000 ₹", posts: "8 Images /mo", video: "8 Shorts /mo", adSupport: "YES", profile: "GMB + Social SEO" },
-  { name: "Professional", price: "30,000 ₹", posts: "16 Images /mo", video: "12 Shorts /mo", adSupport: "YES", profile: "Full Optimization" },
-  { name: "Premium", price: "50,000 ₹", posts: "20 Images /mo", video: "16 Shorts /mo", adSupport: "YES", profile: "Complete Management" },
-  { name: "Platinum", price: "60,000 ₹", posts: "28 Images /mo", video: "20 Shorts /mo", adSupport: "YES", profile: "Enterprise Suite" }
+  {
+    name: "Growth Starter",
+    price: "₹10,000",
+    posts: "12 Creative Posts / Month",
+    video: "2 Short Reels / Videos",
+    adSupport: "Basic Campaign Setup",
+    profile: "Monthly Profile Audit"
+  },
+  {
+    name: "Brand Accelerator",
+    price: "₹18,000",
+    posts: "20 Creative Posts / Month",
+    video: "6 Short Reels / Videos",
+    adSupport: "Meta Ads Management",
+    profile: "GMB & Local SEO Optimizations"
+  },
+  {
+    name: "Market Dominance",
+    price: "₹30,000",
+    posts: "Daily Custom Designs",
+    video: "12 High-Impact Videos",
+    adSupport: "Full Funnel Lead Generation",
+    profile: "Complete Omnichannel Management"
+  }
 ];
 
 export const addOnsList = [
-  { title: "Image to Video Shorts", price: "800 ₹ / Video" },
-  { title: "Image Slide Long Video with Voice Over (3-6 mins)", price: "2,000 ₹ / Video" },
-  { title: "Video Editing (1 Min)", price: "1,000 ₹ / Video" },
-  { title: "Poster Designs", price: "1,500 ₹ / Post" },
-  { title: "Professional Video Shooting with Editing (2 Mins)", price: "3,000 ₹ / Video" },
-  { title: "Professional Photography Session", price: "5,000 ₹ / Session" },
-  { title: "AI Video Creation (1 Min)", price: "3,000 ₹ / Video" },
-  { title: "GMBO Monthly Support", price: "5,000 ₹ / Month" },
-  { title: "GMBO + SMO Combo", price: "7,500 ₹ (One Time)" }
+  { title: "Google My Business (GMB) Setup", price: "₹3,500" },
+  { title: "Social Media Optimization (SMO)", price: "₹5,000" },
+  { title: "AI-Powered Video Short Production", price: "₹4,000" },
+  { title: "Custom Thermal Logo & Receipt Branding", price: "₹2,000" },
+  { title: "Extra Hardware Setup & Configuration", price: "₹2,500" }
 ];
