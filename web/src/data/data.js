@@ -58,6 +58,9 @@ export const services = [
   { title: "Landing Page", desc: "High-impact landing pages engineered to convert.", icon: "Rocket" },
   { title: "Admin Dashboard", desc: "Data-rich dashboards with clear, actionable insights.", icon: "LayoutDashboard" },
   { title: "React UI Development", desc: "Pixel-perfect, reusable component systems in React.", icon: "Code2" },
+  { title: "Google My Business", desc: "Rank higher on local search and Google Maps to drive foot traffic and calls.", icon: "MapPin" },
+  { title: "Meta Ads Support", desc: "Targeted Facebook and Instagram ad campaigns to generate high-intent leads.", icon: "Megaphone" },
+  { title: "Brand Awareness", desc: "Scale your reach with strategic digital positioning and multi-channel promotion.", icon: "TrendingUp" },
 ];
 
 export const projects = [
