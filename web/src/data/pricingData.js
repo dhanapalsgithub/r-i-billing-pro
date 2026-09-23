@@ -1,0 +1,28 @@
+export const websitePackages = [
+  { name: "Static", price: "12,500 ₹", origPrice: "24,000 ₹", validity: "1 Year", pages: "5", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Static+", price: "15,500 ₹", origPrice: "30,000 ₹", validity: "2 Years", pages: "5", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Dynamic", price: "18,500 ₹", origPrice: "36,000 ₹", validity: "2 Years", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Dynamic+", price: "20,500 ₹", origPrice: "41,000 ₹", validity: "2 Years", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
+  { name: "GMB Dynamic+", price: "23,000 ₹", origPrice: "51,000 ₹", validity: "2 Years", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
+  { name: "SEO + AEO + GEO", price: "35,000 ₹", origPrice: "75,000 ₹", validity: "2 Years", pages: "10", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "GMB Registration + FAQ/Articles" }
+];
+
+export const digitalMarketingPackages = [
+  { name: "Basic", price: "12,000 ₹", posts: "4 Images /mo", video: "4 Shorts /mo", adSupport: "YES", profile: "GMB Setup" },
+  { name: "Starter", price: "20,000 ₹", posts: "8 Images /mo", video: "8 Shorts /mo", adSupport: "YES", profile: "GMB + Social SEO" },
+  { name: "Professional", price: "30,000 ₹", posts: "16 Images /mo", video: "12 Shorts /mo", adSupport: "YES", profile: "Full Optimization" },
+  { name: "Premium", price: "50,000 ₹", posts: "20 Images /mo", video: "16 Shorts /mo", adSupport: "YES", profile: "Complete Management" },
+  { name: "Platinum", price: "60,000 ₹", posts: "28 Images /mo", video: "20 Shorts /mo", adSupport: "YES", profile: "Enterprise Suite" }
+];
+
+export const addOnsList = [
+  { title: "Image to Video Shorts", price: "800 ₹ / Video" },
+  { title: "Image Slide Long Video with Voice Over (3-6 mins)", price: "2,000 ₹ / Video" },
+  { title: "Video Editing (1 Min)", price: "1,000 ₹ / Video" },
+  { title: "Poster Designs", price: "1,500 ₹ / Post" },
+  { title: "Professional Video Shooting with Editing (2 Mins)", price: "3,000 ₹ / Video" },
+  { title: "Professional Photography Session", price: "5,000 ₹ / Session" },
+  { title: "AI Video Creation (1 Min)", price: "3,000 ₹ / Video" },
+  { title: "GMBO Monthly Support", price: "5,000 ₹ / Month" },
+  { title: "GMBO + SMO Combo", price: "7,500 ₹ (One Time)" }
+];
