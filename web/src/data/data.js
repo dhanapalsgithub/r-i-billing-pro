@@ -9,7 +9,7 @@ export const profile = {
   image: "https://horizons-cdn.hostinger.com/ccf663bc-1d78-4200-99ec-25ed813be7f4/eb10bb7ef7dacc4d35254f58fec7d067.png",
   socials: {
     github: "https://github.com/dhanapalsgithub",
-    linkedin: "https://www.linkedin.com/in/dhanapal-a-73359a352/",
+    linkedin: "www.linkedin.com/in/r-i-biiling-pro-dhanapal-b320b6439",
     whatsapp: "https://wa.me/919360380276",
     email: "mailto:dhanapaul2020@gmail.com",
   },
