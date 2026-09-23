@@ -1,7 +1,7 @@
 export const billingPackages = [
   {
     name: "Hardware Bundle (With 80mm Thermal Printer)",
-    price: "18,000 ₹",
+    price: "Amount Negotiable",
     origPrice: "25,000 ₹",
     validity: "Complete Setup",
     description: "RI Billing Pro software bundled with a high-speed 80mm thermal receipt printer.",
@@ -16,7 +16,7 @@ export const billingPackages = [
   },
   {
     name: "Professional Enterprise Billing",
-    price: "30,000 ₹",
+    price: "Amount Negotiable ",
     origPrice: "40,000 ₹",
     validity: "Advanced Enterprise Setup",
     description: "Comprehensive billing software upgrade built with advanced compliance and logistics support.",
@@ -76,7 +76,7 @@ export const digitalMarketingPackages = [
   },
   {
     name: "Brand Accelerator",
-    price: "₹18,000",
+    price: "Amount Negotiable",
     posts: "20 Creative Posts / Month",
     video: "6 Short Reels / Videos",
     adSupport: "Meta Ads Management",
@@ -84,7 +84,7 @@ export const digitalMarketingPackages = [
   },
   {
     name: "Market Dominance",
-    price: "₹30,000",
+    price: "Amount Negotiable",
     posts: "Daily Custom Designs",
     video: "12 High-Impact Videos",
     adSupport: "Full Funnel Lead Generation",
