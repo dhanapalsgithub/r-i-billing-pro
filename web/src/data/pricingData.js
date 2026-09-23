@@ -1,10 +1,10 @@
 export const websitePackages = [
-  { name: "Static", price: "12,500 ₹", origPrice: "24,000 ₹", validity: "1 Year", pages: "5", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Static+", price: "15,500 ₹", origPrice: "30,000 ₹", validity: "2 Years", pages: "5", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Dynamic", price: "18,500 ₹", origPrice: "36,000 ₹", validity: "2 Years", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
-  { name: "Dynamic+", price: "20,500 ₹", origPrice: "41,000 ₹", validity: "2 Years", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
-  { name: "GMB Dynamic+", price: "23,000 ₹", origPrice: "51,000 ₹", validity: "2 Years", pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
-  { name: "SEO + AEO + GEO", price: "35,000 ₹", origPrice: "75,000 ₹", validity: "2 Years", pages: "10", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "GMB Registration + FAQ/Articles" }
+  { name: "Static", price: "10,000 ₹", origPrice: "24,000 ₹",  pages: "unlimited", Domain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Static+", price: "15,500 ₹", origPrice: "30,000 ₹", pages: "unlimited", Domain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Dynamic", price: "18,500 ₹", origPrice: "36,000 ₹",  pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "No" },
+  { name: "Dynamic+", price: "20,500 ₹", origPrice: "41,000 ₹",pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
+  { name: "GMB Dynamic+", price: "23,000 ₹", origPrice: "51,000 ₹",  pages: "Unlimited", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "Yes - Choose Any One" },
+  { name: "SEO + AEO + GEO", price: "35,000 ₹", origPrice: "75,000 ₹",  pages: "10", freeDomain: "YES", freeHosting: "YES", seo: "YES", addon: "GMB Registration + FAQ/Articles" }
 ];
 
 export const digitalMarketingPackages = [
