@@ -2,7 +2,7 @@ export const billingPackages = [
   {
     name: "Hardware Bundle (With 80mm Thermal Printer)",
     price: "Amount Negotiable",
-    origPrice: "25,000 ₹",
+    
     validity: "Complete Setup",
     description: "RI Billing Pro software bundled with a high-speed 80mm thermal receipt printer.",
     features: [
@@ -17,7 +17,7 @@ export const billingPackages = [
   {
     name: "Professional Enterprise Billing",
     price: "Amount Negotiable ",
-    origPrice: "40,000 ₹",
+   
     validity: "Advanced Enterprise Setup",
     description: "Comprehensive billing software upgrade built with advanced compliance and logistics support.",
     features: [
