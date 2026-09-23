@@ -48,6 +48,47 @@ export function About() {
   );
 }
 
+export function WhyChooseUs() {
+  const features = [
+    {
+      title: "Proper SEO Works",
+      desc: "Optimized architecture and metadata to boost your search visibility and organic reach.",
+    },
+    {
+      title: "Business Support",
+      desc: "Dedicated technical assistance and guidance to keep your operations running seamlessly.",
+    },
+    {
+      title: "Custom Design",
+      desc: "Tailor-made, conversion-focused user interfaces designed specifically for your brand.",
+    },
+    {
+      title: "Regular Updates",
+      desc: "Continuous feature improvements, security patches, and modern updates for your platform.",
+    },
+  ];
+
+  return (
+    <Section id="why-choose-us" eyebrow="Why Choose Us" title="Built for performance and reliability" subtitle="Partner with a registered micro-service expert dedicated to your digital growth.">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        {features.map((f, i) => (
+          <motion.div key={f.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.08 }}
+            whileHover={{ y: -6 }} className="glass rounded-[30px] p-7">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#FF7A00] mb-2 block">Feature 0{i + 1}</span>
+            <h3 className="text-lg font-bold mb-2">{f.title}</h3>
+            <p className="text-sm opacity-70 leading-relaxed">{f.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+      
+      <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.35 }} className="glass-strong rounded-[25px] p-6 text-center max-w-xl mx-auto">
+        <p className="text-xs font-semibold uppercase tracking-widest opacity-60 mb-1">Registered Enterprise</p>
+        <p className="text-sm font-bold tracking-wide">MSME / Udyam Reg No: UDYAM-TN-27-0144759 (Micro - Services)</p>
+      </motion.div>
+    </Section>
+  );
+}
+
 export function Skills() {
   return (
     <Section id="skills" eyebrow="Skills" title="Technologies I master" subtitle="A toolkit refined across dozens of production projects.">
