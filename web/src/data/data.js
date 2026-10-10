@@ -200,7 +200,7 @@ export const projects = [
     desc: "A specialized service booking platform built for scheduling traditional astrological and ritual services with ease.",
     tech: ["React", "Responsive UI", "Form Management"],
     url: "https://kasivathyar-ntle.vercel.app/",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800",
+    image: "https://vedictemplepuja.com/wp-content/uploads/2025/09/Vedic-Temple-Puja-Img-2.webp",
     accent: "from-amber-500/40 to-red-900/40",
   },
 ];
